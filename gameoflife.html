@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="gameoflife.css">
+    
+    <!-- BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+    <!-- Font Import -->
+    <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<div id="description_container">
+	<h1>Conway's Game of Life</h1>
+	<p>Any live cell with fewer than two live neighbors dies, as if by underpopulation. Any live cell with more than three live neighbors dies, as if by overcrowding. Any dead cell with exactly three live neighbors becomes a live cell.</p>
+</div>
+
+<div id="controller_container">
+    <p id="controllers"> Hit START to run the Game of Life! </p>
+    <button type="button" id="startButton" class="runButton btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-play"></span> Start
+</button>
+    <button type="button" id="stopButton" class="runButton btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-pause"></span> Pause
+</button>
+</div>
+
+<!--
+define the HTML canvas element that will hold the graphical output
+-->
+<div id="canvas_container">
+</div>
+<p id="menu_description"> Select a preset or get a clear board by selecting 'Custom'!</p>
+<div id="menu_container">
+
+	<ul class="nav nav-pills nav-stacked">
+        <li id="toad"><a>TOAD</a></li>
+        <li id="blinker"><a>BLINKER</a></li>
+	  	<li id="glider"><a>GLIDER</a></li>
+	  	<li id="spaceship"><a>SPACESHIP</a></li>
+        <li id="custom"><a>CUSTOM</a></li>
+	</ul>
+</div>
+
+<!-- execute the JavaScript -->
+<script src="gameoflife.js"></script>
+
+</body>
+</html>
